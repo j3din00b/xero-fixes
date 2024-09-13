@@ -126,7 +126,7 @@ main_menu() {
 
   # Only enable services after package installation
   systemctl enable cosmic-greeter.service && xdg-user-dirs-update
-  systemctl enable com.system76.PowerDaemon.service.service
+  systemctl enable com.system76.PowerDaemon.service
 
 }
 
