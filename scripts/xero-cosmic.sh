@@ -47,26 +47,26 @@ check_gpu_cosmic_compatibility() {
         if echo "$GPU_INFO" | grep -qi "NVIDIA"; then
             # Check for NVIDIA GPU compatibility (900 series and up)
             if echo "$GPU_INFO" | grep -Eqi "GTX (9[0-9]{2}|[1-9][0-9]{3})|RTX|Titan|A[0-9]{2,3}"; then
-                show_dialog "\n\Your nVidia GPU should support \Zb\Z1Cosmic Desktop\Zn, do you want to proceed?"
+                show_dialog "\n\nYour nVidia GPU should support \Zb\Z1Cosmic Desktop\Zn, do you want to proceed?"
             else
-                show_dialog "\n\Older nVidia GPU detected. Only 900 series and later support \Zb\Z1Cosmic Desktop\Zn."
+                show_dialog "\n\nOlder nVidia GPU detected. Only 900 series and later support \Zb\Z1Cosmic Desktop\Zn."
             fi
         elif echo "$GPU_INFO" | grep -qi "Intel"; then
             # Check for Intel GPU compatibility (HD Graphics 4000 series and newer)
             if echo "$GPU_INFO" | grep -Eqi "HD Graphics ([4-9][0-9]{2,3}|[1-9][0-9]{4,})|Iris|Xe"; then
                 show_dialog "\n\nYour Intel GPU should support \Zb\Z1Cosmic Desktop\Zn."
             else
-                show_dialog "Older Intel GPU detected. Only HD Graphics 4000 series and newer support \Zb\Z1Cosmic Desktop\Zn."
+                show_dialog "\n\nOlder Intel GPU detected. Only HD Graphics 4000 series and newer support \Zb\Z1Cosmic Desktop\Zn."
             fi
         elif echo "$GPU_INFO" | grep -qi "AMD"; then
             # Check for AMD GPU compatibility (RX 480 and newer)
             if echo "$GPU_INFO" | grep -Eqi "RX (4[8-9][0-9]|[5-9][0-9]{2,3})|VEGA|RDNA|RADEON PRO"; then
-                show_dialog "\n\Your AMD GPU should support \Zb\Z1Cosmic Desktop\Zn, do you want to proceed?"
+                show_dialog "\n\nYour AMD GPU should support \Zb\Z1Cosmic Desktop\Zn, do you want to proceed?"
             else
-                show_dialog "\n\Older AMD GPU detected. Only RX 480 and newer support \Zb\Z1Cosmic Desktop\Zn."
+                show_dialog "\n\nOlder AMD GPU detected. Only RX 480 and newer support \Zb\Z1Cosmic Desktop\Zn."
             fi
         else
-            show_dialog "\n\Unknown or unsupported GPU detected. \Zb\Z1Cosmic Desktop\Zn compatibility is uncertain."
+            show_dialog "\n\nUnknown or unsupported GPU detected. \Zb\Z1Cosmic Desktop\Zn compatibility is uncertain."
         fi
     else
         show_dialog "Cannot detect GPU. 'lspci' command not found."
