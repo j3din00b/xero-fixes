@@ -226,6 +226,9 @@ alias infox='sudo pacman -Sii '
 ##Refresh Keys
 alias rkeys='sudo pacman-key --refresh-keys'
 
+# Using Oh-My-Posh.
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/xero.omp.json)"
+
 #shutdown or reboot
 alias sr='sudo reboot'
 alias ssn='sudo shutdown now'
