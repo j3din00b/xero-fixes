@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# LibAwaita Theme
+export GTK_THEME=Layan-Dark
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -109,6 +112,9 @@ alias cat='bat '
 alias rg='batgrep '
 alias man='tldr '
 
+#grub update
+alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
 #iso and version used to install XeroLinux
 alias iso="cat /etc/lsb-release"
 
@@ -133,6 +139,9 @@ alias wget='wget -c '
 
 #readable output
 alias df='df -h'
+
+#Flatpak Update
+alias fpup='flatpak update'
 
 #userlist
 alias userlist='cut -d: -f1 /etc/passwd'
@@ -166,15 +175,14 @@ alias zreload='cd ~ && source ~/.zshrc'
 alias pingme='ping -c64 github.com'
 alias cls='clear && fastfetch'
 alias traceme='traceroute github.com'
-alias xff='clear && fastfetch --config ~/.config/fastfetch/stationxero.jsonc'
 
 #youtube-dl
 alias yta-best="yt-dlp --extract-audio --audio-format best "
 alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
 
 #GiT  command
-alias gcl='git clone '
-alias gpl='git pull'
+alias gc='git clone '
+alias gp='git pull'
 
 #Copy/Remove files/dirs
 alias rmd='rm -r'
